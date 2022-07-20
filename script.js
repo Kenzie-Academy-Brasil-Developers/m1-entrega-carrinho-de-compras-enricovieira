@@ -78,4 +78,4 @@ function soma(preco){
     totalValor.innerHTML = ""
     totalValor.append(precoFormatado)
     console.log(totalCarrinho)
-}console.log(soma())
+}

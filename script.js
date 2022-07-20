@@ -28,6 +28,7 @@ function createPage(){
     divTitle.appendChild(pItem)
     pValor.innerText = "valor"
     divTitle.appendChild(pValor)
+    ul.classList = "productList"
     section.appendChild(ul)
     divTotal.classList = "total-carrinho"
     section.appendChild(divTotal)
@@ -35,11 +36,11 @@ function createPage(){
     divTotal.appendChild(total)
     totalValor.innerText = 0
     divTotal.appendChild(totalValor)
-    button.classList = "buy-btn"
+    button.classList = "ButtonEnd"
     button.innerText = "Finalizar compra"
     section.appendChild(button)
 
-}console.log(createPage())
+}createPage()
 
 function createCard(lista){
     for(let i = 0; i<lista.length; i++){
@@ -48,7 +49,7 @@ function createCard(lista){
         ul.appendChild(cardProdutos)
         soma(produtos.price)
     }
-}console.log(createCard(products));
+}createCard(products);
 
 function criarCard(produtos){
     
@@ -60,7 +61,7 @@ function criarCard(produtos){
     let nome = produtos.name
     let preco = produtos.price
 
-    card.classList = "card"
+    card.classList = "productDetails"
     h2.classList = "title"
     h2.innerText = nome
     span.classList = "price"

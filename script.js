@@ -6,11 +6,11 @@ let section         = document.createElement("section")
 let divTitle        = document.createElement("div")
 let pItem           = document.createElement("p")
 let pValor          = document.createElement("p")
-let ul              = document.createElement("ul")
+let productList     = document.createElement("ul")
 let divTotal        = document.createElement("div")
 let total           = document.createElement("p")
 let totalValor      = document.createElement("p")
-let button          = document.createElement("button")
+let buttonEnd       = document.createElement("button")
 let totalCarrinho   = 0
 
 function createPage(){
@@ -28,17 +28,16 @@ function createPage(){
     divTitle.appendChild(pItem)
     pValor.innerText = "valor"
     divTitle.appendChild(pValor)
-    ul.classList = "productList"
-    section.appendChild(ul)
+    section.appendChild(productList)
     divTotal.classList = "total-carrinho"
     section.appendChild(divTotal)
     total.innerText = "Total"
     divTotal.appendChild(total)
     totalValor.innerText = 0
     divTotal.appendChild(totalValor)
-    button.classList = "ButtonEnd"
-    button.innerText = "Finalizar compra"
-    section.appendChild(button)
+    buttonEnd.classList = "buy-btn"
+    buttonEnd.innerText = "Finalizar compra"
+    section.appendChild(buttonEnd)
 
 }createPage()
 
@@ -46,14 +45,14 @@ function createCard(lista){
     for(let i = 0; i<lista.length; i++){
         let produtos = lista[i]
         let cardProdutos = criarCard(produtos)
-        ul.appendChild(cardProdutos)
+        productList.appendChild(cardProdutos)
         soma(produtos.price)
     }
 }createCard(products);
 
 function criarCard(produtos){
     
-    let card = document.createElement("li")
+    let productDetails = document.createElement("li")
     let h2 = document.createElement("h2")
     let span = document.createElement("span")
     
@@ -61,16 +60,16 @@ function criarCard(produtos){
     let nome = produtos.name
     let preco = produtos.price
 
-    card.classList = "productDetails"
+    productDetails.classList = "card"
     h2.classList = "title"
     h2.innerText = nome
     span.classList = "price"
     span.innerText = `R$${preco}`
 
-    card.appendChild(h2)
-    card.appendChild(span)
+    productDetails.appendChild(h2)
+    productDetails.appendChild(span)
 
-    return card
+    return productDetails
 }
 
 function soma(preco){

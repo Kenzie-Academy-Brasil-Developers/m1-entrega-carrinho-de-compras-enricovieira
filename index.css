@@ -1,0 +1,93 @@
+html,body,h1,main,div,header,p,ul,li,h2,span,button{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+    outline: none;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    background-color: #ffffff;
+    border: solid 1px transparent;
+    border-radius: 10px;
+}
+
+.title-carrinho{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(41, 40, 40);
+    color: white;
+    border:solid 1px transparent;
+    border-radius: 10px;
+}
+
+.title-carrinho p{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.card{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.price{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.buy-btn{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(41, 40, 40);
+    color: #ffffff;
+}
+.buy-btn:hover{
+    background-color: #ffee03;
+    color: black;
+    transition: 0.25s ease-out;
+}
+.total-carrinho{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(213, 212, 212);
+    color: rgb(0, 0, 0);
+    border:solid 1px transparent;
+    border-radius: 10px;
+}
+.total-carrinho p{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+}
